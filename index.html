@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Local Storage</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script type="text/javascript" src='./js/app.js'></script>
+</head>
+<body>
+	<div class="container">
+		<div class="message" id="message">
+		</div>
+		<h2>MySelfieTech</h2>
+
+		<!-- Landing Content -->
+		<div id="landing-content">
+			<button onclick="showLogin()" type="button">login</button>
+			<button onclick="showSignUp()" type="button">signup</button>
+		</div>
+
+		<!-- sign up form -->
+		<div id="signup-content">
+			<form id="signup" onsubmit="signupSubmit(); return false" action="">
+				<div>
+					<input type="text" name="username" placeholder="Name" id='username' class="username">
+				</div>
+				<div>
+					<input type="email" name="email" placeholder="email" id='email' class="email">
+				</div>
+				<div>
+					<input type="password" name="password" placeholder="Password" id="password" class="password">
+				</div>
+				<div>
+					<input type="submit" value="Submit Query">
+				</div>
+			</form>
+			<button onclick="hideSignup()">back</button>
+		</div>
+
+		<!-- login form -->
+		<div id='login-content'>
+			<h3>Login</h3>
+			<form id="login" onsubmit="loginSubmit(); return false;">
+				<div>
+					<input type="text" name="username" placeholder="User name" id='login_username' class="username">
+				</div>
+
+				<div>
+					<input type="password" name="password" placeholder="Password" id='login_password'>
+				</div>
+				<div>
+					<input type="submit" value="Submit">
+				</div>
+				<div>
+				</div>
+			</form>
+			<button onclick="hideLogin()">back</button>
+		</div>
+
+		<!-- welcome user -->
+		<div id='welcome-content'>
+			<h3>
+				Welcome
+				<span id='user'></span>
+			</h3>
+			<button onclick="logout(); return false;">Log out</button>
+		</div>
+
+	</div>
+</body>
+</html>
